@@ -1,3 +1,3 @@
 class Website < ApplicationRecord
-  has_many :alerts
+  has_many :trumpets
 end
