@@ -1,5 +1,5 @@
 class Api::V1::TrumpetsController < ApplicationController
-  before_action :find_trumpet, only: [:show, :update]
+  before_action :find_trumpet, only: [:show, :update, :destroy]
 
   def index
     @trumpets = Trumpet.all
@@ -20,6 +20,10 @@ class Api::V1::TrumpetsController < ApplicationController
     @website = Website.find_or_create_by(url: trumpet_params[:url], root_url: trumpet_params[:root_url])
     @trumpet.update(user_id: trumpet_params[:user_id], website_id: @website.id, summary: trumpet_params[:summary], trumpet_type: trumpet_params[:trumpet_type], content: trumpet_params[:content])
     head :no_content
+  end
+
+  def destroy
+    @trumpet.destroy
   end
 
   private
