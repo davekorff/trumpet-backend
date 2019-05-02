@@ -1,5 +1,5 @@
 class Api::V1::TrumpetSerializer < ActiveModel::Serializer
-  attributes :id, :trumpet_type, :content, :cheers, :jeers
+  attributes :id, :summary, :trumpet_type, :content, :cheers, :jeers
 
   belongs_to :user
   belongs_to :website
