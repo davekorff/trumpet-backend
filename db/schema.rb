@@ -10,21 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_01_231105) do
+ActiveRecord::Schema.define(version: 2019_05_02_132817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "alerts", force: :cascade do |t|
-    t.string "trumpet_type"
-    t.string "content"
-    t.bigint "user_id"
-    t.bigint "website_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_alerts_on_user_id"
-    t.index ["website_id"], name: "index_alerts_on_website_id"
-  end
 
   create_table "trumpets", force: :cascade do |t|
     t.string "trumpet_type"
@@ -53,8 +42,6 @@ ActiveRecord::Schema.define(version: 2019_05_01_231105) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "alerts", "users"
-  add_foreign_key "alerts", "websites"
   add_foreign_key "trumpets", "users"
   add_foreign_key "trumpets", "websites"
 end
