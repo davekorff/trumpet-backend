@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  trumpet: one
+  cheer: false
+  jeer: false
+
+two:
+  user: two
+  trumpet: two
+  cheer: false
+  jeer: false
