@@ -1,5 +1,5 @@
 class ReactionSerializer < ActiveModel::Serializer
-  attributes :trumpet_id, :reaction_type
+  attributes :trumpet_id, :username, :reaction_type
 
   belongs_to :user
   belongs_to :trumpet
