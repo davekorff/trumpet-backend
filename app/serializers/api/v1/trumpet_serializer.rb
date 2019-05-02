@@ -7,13 +7,13 @@ class Api::V1::TrumpetSerializer < ActiveModel::Serializer
 
   def cheers
     count = 0
-    self.object.reactions.each {|reaction| count += 1 if reaction.cheer }
+    self.object.reactions.each {|reaction| count += 1 if reaction.reaction_type == "cheer" }
     count
   end
 
   def jeers
     count = 0
-    self.object.reactions.each {|reaction| count += 1 if reaction.jeer }
+    self.object.reactions.each {|reaction| count += 1 if reaction.reaction_type == "jeer" }
     count
   end
 end

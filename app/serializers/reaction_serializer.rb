@@ -1,5 +1,5 @@
 class ReactionSerializer < ActiveModel::Serializer
-  attributes :username, :cheer, :jeer
+  attributes :username, :reaction_type
 
   def username
     self.object.user.username

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_02_145844) do
+ActiveRecord::Schema.define(version: 2019_05_02_154906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +18,9 @@ ActiveRecord::Schema.define(version: 2019_05_02_145844) do
   create_table "reactions", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "trumpet_id"
-    t.boolean "cheer"
-    t.boolean "jeer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reaction_type"
     t.index ["trumpet_id"], name: "index_reactions_on_trumpet_id"
     t.index ["user_id"], name: "index_reactions_on_user_id"
   end
