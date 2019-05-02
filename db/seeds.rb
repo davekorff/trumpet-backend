@@ -15,9 +15,9 @@ Website.create(url: 'http://cnn.com/politics', root_url: 'http://cnn.com')
 Website.create(url: 'http://diginn.com/lasagna', root_url: 'http://diginn.com')
 Website.create(url: 'http://imdb.com/avengers_endgame', root_url: 'http://imdb.com')
 
-Trumpet.create(trumpet_type: 'Missing source', content: 'Liar, liar, pants on fire.', user_id: 1, website_id: 1)
-Trumpet.create(trumpet_type: 'Fact check', content: 'The lasagna had a piece of glass in it.', user_id: 2, website_id: 2)
-Trumpet.create(trumpet_type: 'Fact check', content: 'The movie was three hours long!', user_id: 3, website_id: 3)
+Trumpet.create(summary: "Article claimed I am a liar", trumpet_type: 'Missing source', content: 'Liar, liar, pants on fire.', user_id: 1, website_id: 1)
+Trumpet.create(summary: "Ryan claimed lasagna contained a piece of glass", trumpet_type: 'Fact check', content: 'The lasagna had a piece of glass in it.', user_id: 2, website_id: 2)
+Trumpet.create(summary: "Dave claimed the movie was three hours long", trumpet_type: 'Fact check', content: 'The movie was three hours long!', user_id: 3, website_id: 3)
 
 Reaction.create(reaction_type: "cheer", user_id: 1, trumpet_id: 1)
 Reaction.create(reaction_type: "cheer", user_id: 2, trumpet_id: 2)
