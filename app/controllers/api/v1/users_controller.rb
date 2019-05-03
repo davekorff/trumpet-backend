@@ -10,7 +10,16 @@ class Api::V1::UsersController < ApplicationController
     render json: @user
   end
 
+  def create
+    @user = User.create!(user_params)
+    json_response(@user, :created)
+  end
+
   private
+
+  def user_params
+    params.permit(:first_name, :last_name, :username, :password)
+  end
 
   def find_user
     @user = User.find(params[:id])
