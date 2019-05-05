@@ -11,6 +11,7 @@ class Api::V1::ReactionsController < ApplicationController
 
   def destroy
     @reaction.destroy
+    json_response(@reaction, :created)
   end
 
   private
