@@ -20,6 +20,7 @@ class Api::V1::TrumpetsController < ApplicationController
     @website = Website.find_or_create_by(url: trumpet_params[:url], root_url: trumpet_params[:root_url])
     @trumpet.update(user_id: trumpet_params[:user_id], website_id: @website.id, summary: trumpet_params[:summary], trumpet_type: trumpet_params[:trumpet_type], content: trumpet_params[:content])
     head :no_content
+    json_response(@trumpet, :created)
   end
 
   def destroy
