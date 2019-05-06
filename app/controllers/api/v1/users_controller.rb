@@ -15,6 +15,13 @@ class Api::V1::UsersController < ApplicationController
     json_response(@user, :created)
   end
 
+  # def login
+  # end
+
+  # def 
+  # end
+
+
   private
 
   def user_params
