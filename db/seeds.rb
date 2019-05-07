@@ -31,7 +31,7 @@ User.create(username: 'steven', first_name: 'Steven', last_name: 'B', password: 
 User.create(username: 'vicky', first_name: 'Vicky', last_name: 'H', password: 'password')
 User.create(username: 'ian', first_name: 'Ian', last_name: 'H', password: 'password')
 
-root_urls = ['http://notfactcheck.org/', 'http://notcnn.com/', 'http://notfoxnews.com/', 'http://notbreitbart.com/', 'http://notnpr.org/', 'http://notwsj.com/', 'http://notnyt.com/', 'http://notpolitico.com/', 'http://notvox.com/', 'http://notwashingtonpost.com/']
+root_urls = ['http://notcnn.com/', 'http://notfoxnews.com/', 'http://notbreitbart.com/', 'http://notwsj.com/', 'http://notnyt.com/', 'http://notwashingtonpost.com/']
 
 20.times do
   root_urls.each do |prefix|
