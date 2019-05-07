@@ -12,7 +12,7 @@ class Api::V1::TrumpetsController < ApplicationController
 
   def create
     @website = Website.find_or_create_by(url: trumpet_params[:url], root_url: trumpet_params[:root_url])
-    @trumpet = Trumpet.create!(user_id: trumpet_params[:user_id], website_id: @website.id, summary: trumpet_params[:summary], trumpet_type: trumpet_params[:trumpet_type], content: trumpet_params[:content])
+    @trumpet = Trumpet.create!(user_id: trumpet_params[:user_id], website_id: @website.id, summary: trumpet_params[:summary], trumpet_type: trumpet_params[:trumpet_type], content: trumpet_params[:content], img_url: trumpet_params[:img_url])
     json_response(@trumpet, :created)
   end
 
@@ -30,7 +30,7 @@ class Api::V1::TrumpetsController < ApplicationController
   private
 
   def trumpet_params
-    params.permit(:user_id, :url, :root_url, :summary, :trumpet_type, :content)
+    params.permit(:user_id, :url, :root_url, :summary, :trumpet_type, :content, :img_url)
   end
 
   def find_trumpet
